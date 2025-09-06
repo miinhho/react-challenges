@@ -7,14 +7,27 @@ type ProfileCardProps = {
   username: string;
   userId: string;
   description: string;
+
+  socialLinks?: {
+    dribbble?: string;
+    facebook?: string;
+    instagram?: string;
+    x?: string;
+    whatsapp?: string;
+  }
 }
 
 const ProfileCard = ({
   imageUrl,
   username,
   userId,
-  description
+  description,
+  socialLinks
 }: ProfileCardProps) => {
+  const handleSocialClick = (url?: string) => {
+    if (url) window.open(url, '_blank');
+  }
+
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imageContainer}>
@@ -33,11 +46,31 @@ const ProfileCard = ({
           <p className={styles.userId}>@{userId}</p>
         </div>
         <div className={styles.socialIcons}>
-          <DribbbleLogo />
-          <FacebookLogo />
-          <InstagramLogo />
-          <XLogo />
-          <WhatsAppLogo />
+          <DribbbleLogo
+            aria-label="Dribble profile"
+            disabled={socialLinks?.dribbble === undefined}
+            onClick={() => handleSocialClick(socialLinks?.dribbble)}
+          />
+          <FacebookLogo
+            aria-label='Facebook profile'
+            disabled={socialLinks?.facebook === undefined}
+            onClick={() => handleSocialClick(socialLinks?.facebook)}
+          />
+          <InstagramLogo
+            aria-label='Instagram profile'
+            disabled={socialLinks?.instagram === undefined}
+            onClick={() => handleSocialClick(socialLinks?.instagram)}
+          />
+          <XLogo
+            aria-label='X profile'
+            disabled={socialLinks?.x === undefined}
+            onClick={() => handleSocialClick(socialLinks?.x)}
+          />
+          <WhatsAppLogo
+            aria-label='WhatsApp profile'
+            disabled={socialLinks?.whatsapp === undefined}
+            onClick={() => handleSocialClick(socialLinks?.whatsapp)}
+          />
         </div>
         <span className={styles.description}>
           {description}

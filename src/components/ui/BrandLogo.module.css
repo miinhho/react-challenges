@@ -3,3 +3,8 @@
   border-style: none;
   background-color: transparent;
 }
+
+.logoButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}

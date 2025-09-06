@@ -3,100 +3,27 @@ import styles from './BrandLogo.module.css';
 type LogoProps = {
   width?: number;
   height?: number;
-  onClick?: () => void;
-}
+} & React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
-export const DribbbleLogo = ({
+const withBrandLogo = (imageUrl: string) => ({
   width = 20,
   height = 20,
-  onClick
+  ...props
 }: LogoProps) => (
   <button
-    onClick={onClick}
+    {...props}
     className={styles.logoButton}
-    aria-label='dribbble logo button'
   >
     <img
-      src='/assets/brands/dribbble.svg'
-      alt='dribbble logo'
+      src={imageUrl}
       width={width}
       height={height}
     />
   </button>
 )
 
-export const FacebookLogo = ({
-  width = 20,
-  height = 20,
-  onClick,
-}: LogoProps) => (
-  <button
-    onClick={onClick}
-    className={styles.logoButton}
-    aria-label='facebook logo button'
-  >
-    <img
-      src='/assets/brands/facebook.svg'
-      alt='facebook logo'
-      width={width}
-      height={height}
-    />
-  </button>
-)
-
-export const InstagramLogo = ({
-  width = 20,
-  height = 20,
-  onClick,
-}: LogoProps) => (
-  <button
-    onClick={onClick}
-    className={styles.logoButton}
-    aria-label='instagram logo button'
-  >
-    <img
-      src='/assets/brands/instagram.svg'
-      alt='instagram logo'
-      width={width}
-      height={height}
-    />
-  </button>
-)
-
-export const XLogo = ({
-  width = 20,
-  height = 20,
-  onClick
-}: LogoProps) => (
-  <button
-    onClick={onClick}
-    className={styles.logoButton}
-    aria-label='x logo button'
-  >
-    <img
-      src='/assets/brands/x.svg'
-      alt='x logo'
-      width={width}
-      height={height}
-    />
-  </button>
-)
-
-export const WhatsAppLogo = ({
-  width = 20,
-  height = 20,
-  onClick
-}: LogoProps) => (
-  <button
-    onClick={onClick}
-    className={styles.logoButton}
-    aria-label='whatsapp logo button'
-  >
-    <img
-      src='/assets/brands/whatsapp.svg'
-      alt='whatsapp logo'
-      width={width}
-      height={height}
-    />
-  </button>
-)
+export const DribbbleLogo = withBrandLogo('/assets/brands/dribbble.svg');
+export const FacebookLogo = withBrandLogo('/assets/brands/facebook.svg');
+export const InstagramLogo = withBrandLogo('/assets/brands/instagram.svg');
+export const XLogo = withBrandLogo('/assets/brands/x.svg');
+export const WhatsAppLogo = withBrandLogo('/assets/brands/whatsapp.svg');
