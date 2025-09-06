@@ -1,0 +1,9 @@
+.waveBackground {
+  position: absolute;
+  top: -25px;
+  width: 300%;
+  height: 160%;
+  z-index: 1;
+  pointer-events: none;
+  transform: rotate(180deg);
+}
