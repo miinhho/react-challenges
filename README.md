@@ -3,7 +3,7 @@
 ### User Profile ✅
 ![profile-card](./goal/profile-card.webp)
 
-### Image Carousel
+### Image Carousel ✅
 ![image-carousel](./goal/image-carousel.webp)
 
 ### Cookies Banner
