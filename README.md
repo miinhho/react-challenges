@@ -6,7 +6,7 @@
 ### Image Carousel ✅
 ![image-carousel](./goal/image-carousel.webp)
 
-### Cookies Banner
+### Cookies Banner ✅
 ![cookies-banner](./goal/cookies-banner.webp)
 
 ### Create new account

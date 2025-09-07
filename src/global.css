@@ -1,5 +1,11 @@
 :root {
   --font-sm: 13px;
   --font-md: 15px;
+  --font-lg: 18px;
   --font-2xl: 22px;
+}
+
+.title {
+  font-size: var(--font-2xl);
+  font-weight: 600;
 }

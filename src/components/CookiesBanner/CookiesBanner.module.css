@@ -1,0 +1,109 @@
+.cookieIcon {
+  position: absolute;
+  justify-self: center;
+  width: 5em;
+  top: -3.5rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+.bannerContainer {
+  display: flex;
+  position: relative;
+  background-color: white;
+  width: 500px;
+  height: 250px;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerText {
+  text-align: center;
+  line-height: 1.5;
+  font-size: var(--font-md);
+}
+
+.bannerButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 5rem;
+  margin-top: 2rem;
+}
+
+.bannerButtonsContainer button {
+  cursor: pointer;
+  width: 10rem;
+  border: 0.15rem solid;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  font-size: var(--font-md);
+}
+
+.customizeButton {
+  border-color: rgb(172, 172, 172);
+  color: rgb(142, 142, 142);
+  background-color: transparent;
+}
+
+.acceptAllButton {
+  border: none;
+  background: linear-gradient(90deg, #f0ac2f 0%, #c33b12 100%);
+  color: white;
+}
+
+.customizeContainer {
+  display: flex;
+  position: relative;
+  background-color: white;
+  width: 500px;
+  min-height: 350px;
+  border: 1px solid lightgray;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.customizeTitleContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+}
+
+.customizeBackArrow {
+  position: relative;
+  cursor: pointer;
+  width: 18px;
+  left: -5rem;
+}
+
+.toggleContainer {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  row-gap: 0.5rem;
+}
+
+.toggleItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.cookieDetails {
+  margin-top: -0.5rem;
+  font-size: var(--font-sm);
+  line-height: 1.5;
+  color: gray;
+}
