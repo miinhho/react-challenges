@@ -30,7 +30,7 @@ const SignUp = () => {
   return (
     <div className={styles.signUpContainer}>
       <header className={styles.signUpHeader}>
-        <h2 className='title'>Sign Up</h2>
+        <h2 className="title">Sign Up</h2>
         <span className={styles.description}>
           Join us now! Sign up to kick-start your journey.
         </span>
@@ -39,74 +39,83 @@ const SignUp = () => {
         <div className={styles.inputContainer}>
           <div className={styles.inputLabelContainer}>
             <input
-              id='name'
+              id="name"
               name="name"
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder=" "
             />
-            <label htmlFor='name'>Name</label>
+            <label htmlFor="name">Name</label>
           </div>
           <div className={styles.errorMessageContainer}>
-            {errors.name && <p className={styles.errorText}>{errors.name[0]}</p>}
+            {errors.name && (
+              <p className={styles.errorText}>{errors.name[0]}</p>
+            )}
           </div>
         </div>
         <div className={styles.inputContainer}>
           <div className={styles.inputLabelContainer}>
             <input
-              id='email'
+              id="email"
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder=" "
             />
-            <label htmlFor='email'>Email</label>
+            <label htmlFor="email">Email</label>
           </div>
           <div className={styles.errorMessageContainer}>
-            {errors.email && <p className={styles.errorText}>{errors.email[0]}</p>}
+            {errors.email && (
+              <p className={styles.errorText}>{errors.email[0]}</p>
+            )}
           </div>
         </div>
         <div className={styles.inputContainer}>
           <div className={styles.inputLabelContainer}>
             <input
-              id='password'
+              id="password"
               name="password"
               type={showPassword ? 'text' : 'password'}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder=" "
             />
-            <label htmlFor='password'>Password</label>
+            <label htmlFor="password">Password</label>
             <button
               type="button"
-              aria-label='Toggle Password Visibility'
+              aria-label="Toggle Password Visibility"
               className={styles.togglePasswordButton}
               onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ?
-                <Eye className={styles.togglePasswordIcon} /> :
+              {showPassword ? (
+                <Eye className={styles.togglePasswordIcon} />
+              ) : (
                 <EyeClosed className={styles.togglePasswordIcon} />
-              }
+              )}
             </button>
           </div>
           <div className={styles.errorMessageContainer}>
-            {errors.password && <p className={styles.errorText}>{errors.password[0]}</p>}
+            {errors.password && (
+              <p className={styles.errorText}>{errors.password[0]}</p>
+            )}
           </div>
         </div>
         <div className={styles.buttonContainer}>
           <button type="submit" className={styles.signUpButton}>
             Sign up
           </button>
-          <button type='button' className={styles.signUpWithOAuthButton}>
+          <button type="button" className={styles.signUpWithOAuthButton}>
             <GoogleLogo className={styles.oauthLogo} />
             Sign up with Google
           </button>
         </div>
       </form>
-      <Divider content='or' />
+      <Divider content="or" />
       <footer className={styles.signUpFooter}>
-        <p>Already have an account? <a href=''>Log In</a></p>
+        <p>
+          Already have an account? <a href="">Log In</a>
+        </p>
       </footer>
     </div>
   )

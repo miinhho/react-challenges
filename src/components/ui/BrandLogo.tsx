@@ -7,11 +7,14 @@ type LogoProps = {
 
 const withBrandLogo =
   (imageUrl: string) =>
-    ({ width = 20, height = 20, ...props }: LogoProps) => (
-      <div {...props} className={`${styles.logoContainer} ${props.className || ''}`}>
-        <img src={imageUrl} width={width} height={height} />
-      </div>
-    )
+  ({ width = 20, height = 20, ...props }: LogoProps) => (
+    <div
+      {...props}
+      className={`${styles.logoContainer} ${props.className || ''}`}
+    >
+      <img src={imageUrl} width={width} height={height} />
+    </div>
+  )
 
 export const DribbbleLogo = withBrandLogo('/assets/brands/dribbble.svg')
 export const FacebookLogo = withBrandLogo('/assets/brands/facebook.svg')

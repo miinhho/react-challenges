@@ -4,5 +4,10 @@ node_modules
 dist
 build
 
-.md
-.json
+*.md
+*.json
+
+pnpm-lock.yaml
+.prettierrc
+
+index.html

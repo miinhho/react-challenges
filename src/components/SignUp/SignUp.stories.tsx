@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import SignUp from "./SignUp";
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import SignUp from './SignUp'
 
 const meta: Meta<typeof SignUp> = {
-  title: "components/SignUp",
+  title: 'components/SignUp',
   component: SignUp,
 }
 
