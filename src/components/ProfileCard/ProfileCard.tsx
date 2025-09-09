@@ -1,19 +1,25 @@
-import { DribbbleLogo, FacebookLogo, InstagramLogo, WhatsAppLogo, XLogo } from '../ui/BrandLogo';
-import styles from './ProfileCard.module.css';
-import WaveBackground from './WaveBackground';
+import {
+  DribbbleLogo,
+  FacebookLogo,
+  InstagramLogo,
+  WhatsAppLogo,
+  XLogo,
+} from '../ui/BrandLogo'
+import styles from './ProfileCard.module.css'
+import WaveBackground from './WaveBackground'
 
 type ProfileCardProps = {
-  imageUrl: string;
-  username: string;
-  userId: string;
-  description: string;
+  imageUrl: string
+  username: string
+  userId: string
+  description: string
 
   socialLinks?: {
-    dribbble?: string;
-    facebook?: string;
-    instagram?: string;
-    x?: string;
-    whatsapp?: string;
+    dribbble?: string
+    facebook?: string
+    instagram?: string
+    x?: string
+    whatsapp?: string
   }
 }
 
@@ -22,10 +28,10 @@ const ProfileCard = ({
   username,
   userId,
   description,
-  socialLinks
+  socialLinks,
 }: ProfileCardProps) => {
   const handleSocialClick = (url?: string) => {
-    if (url) window.open(url, '_blank');
+    if (url) window.open(url, '_blank')
   }
 
   return (
@@ -52,37 +58,31 @@ const ProfileCard = ({
             onClick={() => handleSocialClick(socialLinks?.dribbble)}
           />
           <FacebookLogo
-            aria-label='Facebook profile'
+            aria-label="Facebook profile"
             disabled={socialLinks?.facebook === undefined}
             onClick={() => handleSocialClick(socialLinks?.facebook)}
           />
           <InstagramLogo
-            aria-label='Instagram profile'
+            aria-label="Instagram profile"
             disabled={socialLinks?.instagram === undefined}
             onClick={() => handleSocialClick(socialLinks?.instagram)}
           />
           <XLogo
-            aria-label='X profile'
+            aria-label="X profile"
             disabled={socialLinks?.x === undefined}
             onClick={() => handleSocialClick(socialLinks?.x)}
           />
           <WhatsAppLogo
-            aria-label='WhatsApp profile'
+            aria-label="WhatsApp profile"
             disabled={socialLinks?.whatsapp === undefined}
             onClick={() => handleSocialClick(socialLinks?.whatsapp)}
           />
         </div>
-        <span className={styles.description}>
-          {description}
-        </span>
+        <span className={styles.description}>{description}</span>
       </section>
       <div className={styles.buttonContainer}>
-        <button className={styles.followButton}>
-          Follow
-        </button>
-        <button className={styles.messageButton}>
-          Message
-        </button>
+        <button className={styles.followButton}>Follow</button>
+        <button className={styles.messageButton}>Message</button>
       </div>
     </div>
   )

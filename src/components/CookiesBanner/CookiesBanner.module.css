@@ -1,7 +1,7 @@
 .cookieIcon {
   position: absolute;
   justify-self: center;
-  width: 5em;
+  width: 80px;
   top: -3.5rem;
   pointer-events: none;
   user-select: none;
@@ -11,9 +11,10 @@
   display: flex;
   position: relative;
   background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 500px;
   height: 250px;
-  border-radius: 1.5rem;
+  border-radius: 24px;
   padding: 1rem;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +62,7 @@
   width: 500px;
   min-height: 350px;
   border: 1px solid lightgray;
-  border-radius: 1.5rem;
+  border-radius: 24px;
   padding: 1rem;
   flex-direction: column;
   justify-content: center;

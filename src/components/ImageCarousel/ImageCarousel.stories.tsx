@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import ImageCarousel from "./ImageCarousel";
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import ImageCarousel from './ImageCarousel'
 
 const meta: Meta<typeof ImageCarousel> = {
-  title: "Components/ImageCarousel",
+  title: 'Components/ImageCarousel',
   component: ImageCarousel,
 }
 

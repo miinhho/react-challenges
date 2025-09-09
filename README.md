@@ -1,46 +1,42 @@
 # React Challenge
 
-### User Profile ✅
-![profile-card](./goal/profile-card.webp)
+### DAY 1: User Profile ✅
 
-### Image Carousel ✅
-![image-carousel](./goal/image-carousel.webp)
+![profile-card](./images/user-profile.png)
 
-### Cookies Banner ✅
-![cookies-banner](./goal/cookies-banner.webp)
+### DAY 2: Image Carousel ✅
 
-### Create new account
-![create-account](./goal/create-account.webp)
+![image-carousel](./images/image-carousel.png)
 
-### Sign Up Page
+### DAY 3: Cookies Banner ✅
+
+![cookies-banner](./images/cookies-banner.png)
+![cookies-banner-details](./images/cookies-banner-detail.png)
+
+### DAY 4: Sign Up Page
+
 ![sign-up-page](./goal/sign-up-page.webp)
 
-### Password Generator
+### DAY 5: Password Generator
+
 ![password-generator](./goal/password-generator.webp)
 
-### Code Verification
-![code-verification](./goal/code-verification.webp)
+### DAY 6: Shopping List
 
-### Hotel Booking
-![hotel-booking](./goal/hotel-booking.webp)
-
-### Shopping List
 ![shopping-list](./goal/shopping-list.webp)
 
-### Notifications
-![notifications](./goal/notifications.webp)
+### DAY 7: Upload images
 
-### Upload images
 ![upload-images](./goal/upload-images.webp)
 
-### Card Wallet
+### DAY 8: Card Wallet
+
 ![card-wallet](./goal/card-wallet.webp)
 
-### Rate Us
+### DAY 9: Rate Us
+
 ![rate-us](./goal/rate-us.webp)
 
-### Settings Appearance
-![settings-appearance](./goal/settings-appearance.webp)
+### DAY 10: Navigation UI
 
-### Navigation UI
 ![navigation-ui](./goal/navigation-ui.webp)

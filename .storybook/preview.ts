@@ -1,5 +1,5 @@
-import type { Preview } from "@storybook/react-vite";
-import "../src/global.css";
+import type { Preview } from '@storybook/react-vite'
+import '../src/global.css'
 
 const preview: Preview = {
   parameters: {
@@ -9,8 +9,8 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    layout: "centered",
+    layout: 'centered',
   },
-};
+}
 
-export default preview;
+export default preview

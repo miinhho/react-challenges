@@ -1,11 +1,11 @@
-import { ArrowLeft, ArrowRight } from "lucide-react"
-import { useState } from "react"
-import styles from "./ImageCarousel.module.css"
-import { images, PREVIEW_IMAGE_COUNT } from "./constant"
+import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { useState } from 'react'
+import styles from './ImageCarousel.module.css'
+import { images, PREVIEW_IMAGE_COUNT } from './constant'
 
 type ImagePreviewProps = {
-  src: string,
-  isCurrent?: boolean,
+  src: string
+  isCurrent?: boolean
 }
 
 const ImagePreview = ({ src, isCurrent = false }: ImagePreviewProps) => {
@@ -37,18 +37,19 @@ const ImageCarousel = () => {
   }
 
   const getPreviewImages = () => {
-    const halfCount = Math.floor(PREVIEW_IMAGE_COUNT / 2);
-    const startIndex = (currentIndex - halfCount + images.length) % images.length;
-    const result = [];
+    const halfCount = Math.floor(PREVIEW_IMAGE_COUNT / 2)
+    const startIndex =
+      (currentIndex - halfCount + images.length) % images.length
+    const result = []
 
     for (let i = 0; i < PREVIEW_IMAGE_COUNT; i++) {
-      const index = (startIndex + i) % images.length;
-      result.push(images[index]);
+      const index = (startIndex + i) % images.length
+      result.push(images[index])
     }
 
-    return result;
+    return result
   }
-  const previewImages = getPreviewImages();
+  const previewImages = getPreviewImages()
 
   const currentImage = images.find((image) => image.order === currentIndex)
 
@@ -56,10 +57,7 @@ const ImageCarousel = () => {
     <div className={styles.imageCarouselContainer}>
       <div className={styles.carouselContainer}>
         <ArrowLeft onClick={handlePrev} className={styles.arrow} />
-        <img
-          src={currentImage?.src}
-          className={styles.currentImage}
-        />
+        <img src={currentImage?.src} className={styles.currentImage} />
         <ArrowRight onClick={handleNext} className={styles.arrow} />
       </div>
       <div className={styles.previewContainer}>

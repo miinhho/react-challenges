@@ -2,8 +2,9 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  background-color: white;
   align-items: center;
-  border-radius: 3rem;
+  border-radius: 48px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 350px;
   height: 550px;

@@ -3,7 +3,11 @@ import { ArrowLeft } from 'lucide-react'
 import { useState } from 'react'
 import ToggleSwitch from '../ui/ToggleSwitch'
 import styles from './CookiesBanner.module.css'
-import { COOKIE_PREFERENCES_KEY, type CookieSettings, getCookiePreferences } from './cookie-utils'
+import {
+  COOKIE_PREFERENCES_KEY,
+  type CookieSettings,
+  getCookiePreferences,
+} from './cookie-utils'
 
 const CookieIcon = () => (
   <img
@@ -28,21 +32,20 @@ const CookiesBanner = () => {
       marketing: true,
     }
 
-    Cookies.set(
-      'cookiePreferences',
-      JSON.stringify(cookieSetting),
-      { expires: 365 }
-    )
+    Cookies.set('cookiePreferences', JSON.stringify(cookieSetting), {
+      expires: 365,
+    })
   }
 
   return (
     <div className={styles.bannerContainer}>
       <CookieIcon />
-      <h3 className='title'>Can we use cookies?</h3>
+      <h3 className="title">Can we use cookies?</h3>
       <span className={styles.bannerText}>
-        We use cookies to enhance your browsing experience, analyze site traffic,
-        and personalize content. By clicking "Accept All", you consent to the use of all cookies.
-        You can manage your perferences or opt out by clicking "Customize".
+        We use cookies to enhance your browsing experience, analyze site
+        traffic, and personalize content. By clicking "Accept All", you consent
+        to the use of all cookies. You can manage your perferences or opt out by
+        clicking "Customize".
       </span>
       <div className={styles.bannerButtonsContainer}>
         <button
@@ -63,37 +66,31 @@ const CookiesBanner = () => {
 }
 
 type CookieCustomizeProps = {
-  onBack: () => void;
+  onBack: () => void
 }
 
 const CookieCustomize = ({ onBack }: CookieCustomizeProps) => {
   const [showDetails, setShowDetails] = useState(false)
   const [cookieSetting, setCookieSetting] = useState<CookieSettings>(
-    getCookiePreferences())
+    getCookiePreferences()
+  )
 
   const toggleCookieSetting = (key: keyof CookieSettings, checked: boolean) => {
     setCookieSetting((prev) => ({ ...prev, [key]: checked }))
   }
 
   const handleSavePreferences = () => {
-    Cookies.set(
-      COOKIE_PREFERENCES_KEY,
-      JSON.stringify(cookieSetting),
-      { expires: 365 }
-    )
+    Cookies.set(COOKIE_PREFERENCES_KEY, JSON.stringify(cookieSetting), {
+      expires: 365,
+    })
   }
 
   return (
     <div className={styles.customizeContainer}>
       <CookieIcon />
       <div className={styles.customizeTitleContainer}>
-        <ArrowLeft
-          className={styles.customizeBackArrow}
-          onClick={onBack}
-        />
-        <h3 className='title'>
-          Customize your perferences
-        </h3>
+        <ArrowLeft className={styles.customizeBackArrow} onClick={onBack} />
+        <h3 className="title">Customize your perferences</h3>
       </div>
       <div className={styles.toggleContainer}>
         <div className={styles.toggleItem}>
@@ -106,9 +103,10 @@ const CookieCustomize = ({ onBack }: CookieCustomizeProps) => {
           </div>
           {showDetails && (
             <span className={styles.cookieDetails}>
-              Necessary cookies help make a website usable by enabling basic functions
-              like page navigation and access to secure areas of the website.
-              The website cannot function properly without these cookies.
+              Necessary cookies help make a website usable by enabling basic
+              functions like page navigation and access to secure areas of the
+              website. The website cannot function properly without these
+              cookies.
             </span>
           )}
         </div>
@@ -122,8 +120,9 @@ const CookieCustomize = ({ onBack }: CookieCustomizeProps) => {
           </div>
           {showDetails && (
             <span className={styles.cookieDetails}>
-              Analytics cookies help website owners to understand how visitors interact
-              with websites by collecting and reporting information anonymously.
+              Analytics cookies help website owners to understand how visitors
+              interact with websites by collecting and reporting information
+              anonymously.
             </span>
           )}
         </div>
@@ -137,9 +136,10 @@ const CookieCustomize = ({ onBack }: CookieCustomizeProps) => {
           </div>
           {showDetails && (
             <span className={styles.cookieDetails}>
-              Marketing cookies are used to track visitors across websites. The intention
-              is to display ads that are relevant and engaging for the individual user
-              and thereby more valuable for publishers and third party advertisers.
+              Marketing cookies are used to track visitors across websites. The
+              intention is to display ads that are relevant and engaging for the
+              individual user and thereby more valuable for publishers and third
+              party advertisers.
             </span>
           )}
         </div>
