@@ -21,22 +21,14 @@
 
 ![password-generator](./goal/password-generator.webp)
 
-### DAY 6: Shopping List
-
-![shopping-list](./goal/shopping-list.webp)
-
-### DAY 7: Upload images
+### DAY 6: Upload images
 
 ![upload-images](./goal/upload-images.webp)
 
-### DAY 8: Card Wallet
-
-![card-wallet](./goal/card-wallet.webp)
-
-### DAY 9: Rate Us
+### DAY 7: Rate Us
 
 ![rate-us](./goal/rate-us.webp)
 
-### DAY 10: Navigation UI
+### DAY 8: Navigation UI
 
 ![navigation-ui](./goal/navigation-ui.webp)
