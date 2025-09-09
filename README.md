@@ -13,9 +13,9 @@
 ![cookies-banner](./images/cookies-banner.png)
 ![cookies-banner-details](./images/cookies-banner-detail.png)
 
-### DAY 4: Sign Up Page
+### DAY 4: Sign Up Page ✅
 
-![sign-up-page](./goal/sign-up-page.webp)
+![sign-up-page](./images/sign-up-page.png)
 
 ### DAY 5: Password Generator
 
