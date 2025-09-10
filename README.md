@@ -17,9 +17,9 @@
 
 ![sign-up-page](./images/sign-up-page.png)
 
-### DAY 5: Password Generator
+### DAY 5: Password Generator ✅
 
-![password-generator](./goal/password-generator.webp)
+![password-generator](./images/password-generator.png)
 
 ### DAY 6: Upload images
 

@@ -54,27 +54,22 @@ const ProfileCard = ({
         <div className={styles.socialIcons}>
           <DribbbleLogo
             aria-label="Dribble profile"
-            disabled={socialLinks?.dribbble === undefined}
             onClick={() => handleSocialClick(socialLinks?.dribbble)}
           />
           <FacebookLogo
             aria-label="Facebook profile"
-            disabled={socialLinks?.facebook === undefined}
             onClick={() => handleSocialClick(socialLinks?.facebook)}
           />
           <InstagramLogo
             aria-label="Instagram profile"
-            disabled={socialLinks?.instagram === undefined}
             onClick={() => handleSocialClick(socialLinks?.instagram)}
           />
           <XLogo
             aria-label="X profile"
-            disabled={socialLinks?.x === undefined}
             onClick={() => handleSocialClick(socialLinks?.x)}
           />
           <WhatsAppLogo
             aria-label="WhatsApp profile"
-            disabled={socialLinks?.whatsapp === undefined}
             onClick={() => handleSocialClick(socialLinks?.whatsapp)}
           />
         </div>

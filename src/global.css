@@ -1,9 +1,11 @@
 :root {
-  --font-xs: 11px;
-  --font-sm: 13px;
-  --font-md: 15px;
-  --font-lg: 18px;
-  --font-2xl: 22px;
+  --font-xs: 0.6rem;
+  --font-sm: 0.8rem;
+  --font-md: 0.9rem;
+  --font-lg: 1.125rem;
+  --font-2xl: 1.375rem;
+  --font-3xl: 1.675rem;
+  --font-4xl: 1.875rem;
 }
 
 .title {

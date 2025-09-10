@@ -25,13 +25,3 @@ export const Default: Story = {
     },
   },
 }
-
-export const NoSocialIcons: Story = {
-  args: {
-    imageUrl: '/assets/user-profile.avif',
-    username: 'Johnny Rogers',
-    userId: 'jonnyrogers',
-    description:
-      'Crafting brand and communication strategies, creating visual designs, leading art direction, and capturing portraits through photography.',
-  },
-}

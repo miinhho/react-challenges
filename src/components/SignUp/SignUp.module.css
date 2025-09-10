@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 16px;
 }
 
 .description {
@@ -26,8 +26,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 24px;
+  margin-top: 32px;
 }
 
 .inputContainer {
@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
   width: 400px;
-  height: 2.5rem;
+  height: 40px;
   border: 1.5px solid #b2b2b2;
   border-radius: 5px;
 }
@@ -54,7 +54,7 @@
 .inputLabelContainer input {
   width: 100%;
   height: 100%;
-  margin-left: 0.5rem;
+  margin-left: 8px;
   font-size: var(--font-md);
   border: none;
   background-color: transparent;
@@ -66,8 +66,9 @@
 
 .inputLabelContainer label {
   position: absolute;
-  left: 0.5rem;
-  top: 0.55rem;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: var(--font-md);
   color: #999;
   pointer-events: none;
@@ -76,18 +77,18 @@
 
 .inputLabelContainer input:focus + label,
 .inputLabelContainer input:not(:placeholder-shown) + label {
-  top: -0.75rem;
-  left: 0.4rem;
+  top: -12px;
+  left: 6px;
   font-size: var(--font-xs);
   color: #3182bd;
   background-color: #fff;
-  padding-right: 0.25rem;
+  padding-right: 4px;
 }
 
 .errorMessageContainer {
-  min-height: 0.25rem;
-  line-height: 0.25rem;
-  margin-top: 0.5rem;
+  min-height: 4px;
+  line-height: 4px;
+  margin-top: 8px;
 }
 
 .errorText {
@@ -98,16 +99,16 @@
 
 .togglePasswordButton {
   position: absolute;
-  right: 0.5rem;
-  top: 0.7rem;
+  right: 8px;
+  top: 11px;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 .togglePasswordIcon {
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
   color: #b2b2b2;
 }
 
@@ -116,13 +117,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
+  gap: 16px;
+  margin-top: 8px;
 }
 
 .signUpButton {
-  width: 26.5rem;
-  height: 2.5rem;
+  width: 424px;
+  height: 40px;
   background-color: hwb(205 0% 80%);
   border: none;
   border-radius: 7.5px;
@@ -133,13 +134,13 @@
 }
 
 .oauthLogo {
-  margin-right: 0.5rem;
-  margin-top: 0.2rem;
+  margin-right: 8px;
+  margin-top: 3px;
 }
 
 .signUpWithOAuthButton {
-  width: 26.5rem;
-  height: 2.5rem;
+  width: 424px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,7 +150,7 @@
   font-size: var(--font-md);
   color: black;
   cursor: pointer;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
 .signUpFooter {
@@ -161,11 +162,11 @@
   .signUpContainer {
     width: 90%;
     height: auto;
-    margin: 1rem;
+    margin: 16px;
   }
 
   .signUpForm {
-    gap: 0.5rem;
+    gap: 8px;
   }
 
   .inputLabelContainer {
@@ -178,7 +179,7 @@
   }
 
   .oauthLogo {
-    margin-right: 0.25rem;
-    margin-top: 0.1rem;
+    margin-right: 4px;
+    margin-top: 2px;
   }
 }

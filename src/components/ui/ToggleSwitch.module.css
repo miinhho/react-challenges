@@ -7,15 +7,15 @@
   );
   --toggle-shadow-offset: 10px;
   --toggle-wider: 3em;
-  --color-grey: #cccccc;
-  --color-green: linear-gradient(90deg, #f0ac2f 0%, #c33b12 100%);
+  --color-off: #cccccc;
+  --color-on: linear-gradient(90deg, #f0ac2f 0%, #c33b12 100%);
 }
 
 .slider {
   display: inline-block;
   width: var(--button-width);
   height: var(--button-height);
-  background-color: var(--color-grey);
+  background-color: var(--color-off);
   border-radius: calc(var(--button-height) / 2);
   position: relative;
   transition: 0.3s all ease-in-out;
@@ -37,7 +37,7 @@
 }
 
 .switch input[type='checkbox']:checked + .slider {
-  background: var(--color-green);
+  background: var(--color-on);
 }
 
 .switch input[type='checkbox']:checked + .slider::after {

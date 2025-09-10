@@ -31,7 +31,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .currentImage {
@@ -48,7 +48,7 @@
 .previewContainer {
   display: flex;
   flex-direction: row;
-  gap: 0.625rem;
+  gap: 10px;
   margin-top: 2rem;
   margin-bottom: -1rem;
   width: 850px;
