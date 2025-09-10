@@ -1,73 +1,74 @@
-import axios from "axios";
-import { CircleCheck, CircleX, RefreshCw, Upload } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-import styles from './UploadImage.module.css';
+import axios from 'axios'
+import { CircleCheck, CircleX, RefreshCw, Upload } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import styles from './UploadImage.module.css'
 
-type UploadStatus = 'idle' | 'uploading' | 'success' | 'error';
+type UploadStatus = 'idle' | 'uploading' | 'success' | 'error'
 
 const UploadImage = () => {
-  const [file, setFile] = useState<File | null>(null);
-  const [status, setStatus] = useState<UploadStatus>('idle');
-  const [uploadProgress, setUploadProgress] = useState(0);
-  const controllerRef = useRef<AbortController | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [image, setImage] = useState<File | null>(null)
+  const [status, setStatus] = useState<UploadStatus>('idle')
+  const [uploadProgress, setUploadProgress] = useState(0)
+  const controllerRef = useRef<AbortController | null>(null)
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null)
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      const next = e.target.files[0];
-      setFile(next);
-      setStatus('idle');
-      setUploadProgress(0);
+      const next = e.target.files[0]
+      setImage(next)
+      setStatus('idle')
+      setUploadProgress(0)
 
-      const url = URL.createObjectURL(next);
-      setPreviewUrl(url);
+      const url = URL.createObjectURL(next)
+      setPreviewUrl(url)
     }
   }
 
-  const handleFileUpload = async () => {
-    if (!file) return;
-    controllerRef.current = new AbortController();
-    const { signal } = controllerRef.current;
+  const handleImageUpload = async () => {
+    if (!image) return
+    controllerRef.current = new AbortController()
+    const { signal } = controllerRef.current
 
-    setStatus('uploading');
-    setUploadProgress(0);
+    setStatus('uploading')
+    setUploadProgress(0)
 
-    const formData = new FormData();
-    formData.append('file', file);
+    const formData = new FormData()
+    formData.append('image', image)
 
     try {
       await axios.post('https://httpbin.org/post', formData, {
         headers: {
-          'Content-Type': 'multipart/form-data'
+          'Content-Type': 'multipart/form-data',
         },
         onUploadProgress: (progressEvent) => {
-          const progress = progressEvent.total ?
-            Math.round((progressEvent.loaded * 100) / progressEvent.total) : 0;
-          setUploadProgress(progress);
+          const progress = progressEvent.total
+            ? Math.round((progressEvent.loaded * 100) / progressEvent.total)
+            : 0
+          setUploadProgress(progress)
         },
-        signal
+        signal,
       })
-      setStatus('success');
+      setStatus('success')
     } catch {
-      setStatus('error');
-      setUploadProgress(0);
+      setStatus('error')
+      setUploadProgress(0)
     }
   }
 
   const handleCancelUpload = () => {
-    if (controllerRef.current === null) return;
-    controllerRef.current.abort();
-    setStatus('idle');
-    setUploadProgress(0);
+    if (controllerRef.current === null) return
+    controllerRef.current.abort()
+    setStatus('idle')
+    setUploadProgress(0)
   }
 
   useEffect(() => {
     return () => {
       if (previewUrl) {
-        URL.revokeObjectURL(previewUrl);
+        URL.revokeObjectURL(previewUrl)
       }
     }
-  }, [previewUrl]);
+  }, [previewUrl])
 
   return (
     <div className={styles.uploadContainer}>
@@ -82,20 +83,20 @@ const UploadImage = () => {
         type="file"
         id="input-image"
         accept="image/*"
-        onChange={handleFileChange}
+        onChange={handleImageChange}
         aria-label="Choose an image to upload"
       />
-      {file && (
+      {image && (
         <div className={styles.fileInfoContainer}>
           <img
             src={previewUrl ?? ''}
-            alt={file?.name ?? 'preview'}
+            alt={image.name ?? 'preview'}
             className={styles.imagePreview}
           />
           <div className={styles.imageDetails}>
-            <p className={styles.imageName}>{file.name}</p>
+            <p className={styles.imageName}>{image.name}</p>
             <p className={styles.imageSize}>
-              {(file.size / (1024 * 1024)).toFixed(2)} MB
+              {(image.size / (1024 * 1024)).toFixed(2)} MB
             </p>
             <div className={styles.uploadProgressContainer}>
               <div className={styles.progressBarBackground}>
@@ -103,19 +104,18 @@ const UploadImage = () => {
                   className={styles.progressBarFill}
                   style={{
                     width: `${uploadProgress}%`,
-                  }} />
+                  }}
+                />
               </div>
-              <p className={styles.progressBarText}>
-                {uploadProgress}%
-              </p>
+              <p className={styles.progressBarText}>{uploadProgress}%</p>
             </div>
           </div>
           <div className={styles.iconContainer}>
-            {file && status === 'idle' && (
+            {image && status === 'idle' && (
               <button
                 type="button"
                 className={styles.iconButton}
-                onClick={handleFileUpload}
+                onClick={handleImageUpload}
                 aria-label="Upload image"
               >
                 <Upload className={styles.uploadIcon} />
@@ -136,11 +136,11 @@ const UploadImage = () => {
                 <CircleCheck color="green" className={styles.successIcon} />
               </div>
             )}
-            {file && status === 'error' && (
+            {image && status === 'error' && (
               <button
                 type="button"
                 className={styles.iconButton}
-                onClick={handleFileUpload}
+                onClick={handleImageUpload}
                 aria-label="Retry upload"
               >
                 <RefreshCw color="red" className={styles.errorIcon} />

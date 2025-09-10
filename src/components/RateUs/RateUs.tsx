@@ -1,25 +1,24 @@
-import { Star } from "lucide-react"
-import { useState } from "react"
-import styles from "./RateUs.module.css"
+import { Star } from 'lucide-react'
+import { useState } from 'react'
+import styles from './RateUs.module.css'
 
 const RateUs = () => {
   const [rating, setRating] = useState(0)
 
-  const StarRating = ({ star }: { star: number }) =>
+  const StarRating = ({ star }: { star: number }) => (
     <Star
       className={styles.starIcon}
-      color={rating >= star ? "gold" : "gray"}
-      fill={rating >= star ? "gold" : "transparent"}
+      color={rating >= star ? 'gold' : 'gray'}
+      fill={rating >= star ? 'gold' : 'transparent'}
       onClick={() => setRating(star)}
     />
+  )
 
   return (
     <div className={styles.rateContainer}>
       <div className={styles.rateHeader}>
         <h2 className="title">Rate Us!</h2>
-        <p className={styles.description}>
-          Tell us about your experience
-        </p>
+        <p className={styles.description}>Tell us about your experience</p>
       </div>
       <div className={styles.starContainer}>
         <StarRating star={1} />
