@@ -23,12 +23,10 @@
 
 ### DAY 6: Upload images
 
-![upload-images](./goal/upload-images.webp)
+![upload-images](./images/upload-image.png)
+![upload-images-progress](./images/upload-image-progress.png)
+![upload-images-complete](./images/upload-image-complete.png)
 
-### DAY 7: Rate Us
+### DAY 7: Rate Us ✅
 
-![rate-us](./goal/rate-us.webp)
-
-### DAY 8: Navigation UI
-
-![navigation-ui](./goal/navigation-ui.webp)
+![rate-us](./images/rate-us.png)

@@ -1,3 +1,15 @@
+:root {
+  --color-border: #b2b2b2;
+  --color-primary: #3182bd;
+  --color-bg: #ffffff;
+  --color-placeholder: #999999;
+  --color-error: red;
+  --color-button-bg: hwb(205 0% 80%);
+  --color-button-text: white;
+  --color-oauth-bg: white;
+  --color-oauth-text: black;
+}
+
 .signUpContainer {
   display: flex;
   flex-direction: column;
@@ -5,7 +17,7 @@
   width: 500px;
   height: 700px;
   border-radius: 20px;
-  background: white;
+  background: var(--color-bg);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -17,7 +29,7 @@
 }
 
 .description {
-  font-size: var(--font-md);
+  font-size: var(--font-lg);
   text-align: center;
 }
 
@@ -43,12 +55,12 @@
   align-items: center;
   width: 400px;
   height: 40px;
-  border: 1.5px solid #b2b2b2;
+  border: 1.5px solid var(--color-border);
   border-radius: 5px;
 }
 
 .inputLabelContainer:focus-within {
-  border-color: #3182bd;
+  border-color: var(--color-primary);
 }
 
 .inputLabelContainer input {
@@ -70,7 +82,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: var(--font-md);
-  color: #999;
+  color: var(--color-placeholder);
   pointer-events: none;
   transition: 0.2s ease all;
 }
@@ -80,8 +92,8 @@
   top: -12px;
   left: 6px;
   font-size: var(--font-xs);
-  color: #3182bd;
-  background-color: #fff;
+  color: var(--color-primary);
+  background-color: var(--color-bg);
   padding-right: 4px;
 }
 
@@ -92,7 +104,7 @@
 }
 
 .errorText {
-  color: red;
+  color: var(--color-error);
   font-size: var(--font-xs);
   margin: 0;
 }
@@ -109,7 +121,7 @@
 .togglePasswordIcon {
   width: 16px;
   height: 16px;
-  color: #b2b2b2;
+  color: var(--color-border);
 }
 
 .buttonContainer {
@@ -124,12 +136,12 @@
 .signUpButton {
   width: 424px;
   height: 40px;
-  background-color: hwb(205 0% 80%);
+  background-color: var(--color-button-bg);
   border: none;
   border-radius: 7.5px;
-  font-size: var(--font-md);
+  font-size: var(--font-lg);
   cursor: pointer;
-  color: white;
+  color: var(--color-button-text);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -144,42 +156,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  border: 1.5px solid #b2b2b2;
+  background-color: var(--color-oauth-bg);
+  border: 1.5px solid var(--color-border);
   border-radius: 7.5px;
-  font-size: var(--font-md);
-  color: black;
+  font-size: var(--font-lg);
+  color: var(--color-oauth-text);
   cursor: pointer;
   margin-bottom: 8px;
 }
 
 .signUpFooter {
   font-size: var(--font-md);
-  color: black;
-}
-
-@media only screen and (max-width: 768px) {
-  .signUpContainer {
-    width: 90%;
-    height: auto;
-    margin: 16px;
-  }
-
-  .signUpForm {
-    gap: 8px;
-  }
-
-  .inputLabelContainer {
-    width: 90%;
-  }
-
-  .signUpButton,
-  .signUpWithOAuthButton {
-    width: 90%;
-  }
-
-  .oauthLogo {
-    margin-right: 4px;
-    margin-top: 2px;
-  }
+  color: var(--color-oauth-text);
 }

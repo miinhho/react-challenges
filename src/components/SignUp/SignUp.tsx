@@ -29,12 +29,12 @@ const SignUp = () => {
 
   return (
     <div className={styles.signUpContainer}>
-      <header className={styles.signUpHeader}>
+      <div className={styles.signUpHeader}>
         <h2 className="title">Sign Up</h2>
         <span className={styles.description}>
           Join us now! Sign up to kick-start your journey.
         </span>
-      </header>
+      </div>
       <form onSubmit={handleSubmit} className={styles.signUpForm}>
         <div className={styles.inputContainer}>
           <div className={styles.inputLabelContainer}>

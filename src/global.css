@@ -3,12 +3,13 @@
   --font-sm: 0.8rem;
   --font-md: 0.9rem;
   --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
   --font-2xl: 1.375rem;
   --font-3xl: 1.675rem;
   --font-4xl: 1.875rem;
 }
 
 .title {
-  font-size: var(--font-2xl);
+  font-size: var(--font-3xl);
   font-weight: 600;
 }
