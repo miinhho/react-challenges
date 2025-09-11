@@ -1,5 +1,10 @@
 # React Challenge
 
+You can see each component with storybook by
+```bash
+pnpm storybook
+```
+
 ### DAY 1: User Profile
 
 ![profile-card](./images/user-profile.png)
